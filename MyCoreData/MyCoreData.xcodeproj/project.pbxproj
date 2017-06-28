@@ -15,6 +15,8 @@
 		D8C665B01F03BA7500112CCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C665AE1F03BA7500112CCE /* LaunchScreen.storyboard */; };
 		D8C665BB1F03BA7500112CCE /* MyCoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C665BA1F03BA7500112CCE /* MyCoreDataTests.swift */; };
 		D8C665C61F03BA7500112CCE /* MyCoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C665C51F03BA7500112CCE /* MyCoreDataUITests.swift */; };
+		D8C665D61F03BB7800112CCE /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C665D41F03BB7800112CCE /* Person+CoreDataClass.swift */; };
+		D8C665D71F03BB7800112CCE /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C665D51F03BB7800112CCE /* Person+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D8C665C11F03BA7500112CCE /* MyCoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyCoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C665C51F03BA7500112CCE /* MyCoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoreDataUITests.swift; sourceTree = "<group>"; };
 		D8C665C71F03BA7500112CCE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C665D41F03BB7800112CCE /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D8C665D51F03BB7800112CCE /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		D8C665A11F03BA7500112CCE /* MyCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				D8C665D31F03BB0100112CCE /* DataModel */,
 				D8C665A21F03BA7500112CCE /* AppDelegate.swift */,
 				D8C665A41F03BA7500112CCE /* ViewController.swift */,
 				D8C665A61F03BA7500112CCE /* Main.storyboard */,
@@ -126,6 +131,15 @@
 				D8C665C71F03BA7500112CCE /* Info.plist */,
 			);
 			path = MyCoreDataUITests;
+			sourceTree = "<group>";
+		};
+		D8C665D31F03BB0100112CCE /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				D8C665D41F03BB7800112CCE /* Person+CoreDataClass.swift */,
+				D8C665D51F03BB7800112CCE /* Person+CoreDataProperties.swift */,
+			);
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +276,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C665D61F03BB7800112CCE /* Person+CoreDataClass.swift in Sources */,
+				D8C665D71F03BB7800112CCE /* Person+CoreDataProperties.swift in Sources */,
 				D8C665A51F03BA7500112CCE /* ViewController.swift in Sources */,
 				D8C665A31F03BA7500112CCE /* AppDelegate.swift in Sources */,
 				D8C665AB1F03BA7500112CCE /* MyCoreData.xcdatamodeld in Sources */,
