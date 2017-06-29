@@ -39,7 +39,10 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        fetchData()
+        if (self.dataSource.count <= 0) {
+            fetchData()
+            print("dataArray.Count= \(self.dataSource.count)")
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -169,18 +172,18 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource {
         return "删除"
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let vc = DetailViewController()
-//        let person = self.dataSource[indexPath.row] as! Person
-//        vc.title = "name: \(person.name!), age:\(person.age!)"
-//        
-//        let r = CGFloat(arc4random()%255)*1.0;
-//        let g = CGFloat(arc4random()%255)*1.0;
-//        let b = CGFloat(arc4random()%255)*1.0;
-//        vc.view.backgroundColor = UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1.0)
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        
-//        //取消选中状态
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        let person = self.dataSource[indexPath.row] as! Person
+        vc.title = "name: \(person.name!), age:\(person.age!)"
+        
+        let r = CGFloat(arc4random()%255)*1.0;
+        let g = CGFloat(arc4random()%255)*1.0;
+        let b = CGFloat(arc4random()%255)*1.0;
+        vc.view.backgroundColor = UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1.0)
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+        //取消选中状态
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
